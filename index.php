@@ -31,13 +31,18 @@ class Developer{
    function setName($name){
     $this->developer_name = $name;
    }
+   // constructors
+   function __construct($name, $phone){
+    $this->developer_name =$name;
+    $this->phone_number=$phone;
+   }
 
 }
 
 // object
-$warren =new Developer;
-$warren->setName("Ochieng Warren");
+$warren =new Developer("warren ochieng","0705122230");
 $warren->getName();
+
  
 
 
