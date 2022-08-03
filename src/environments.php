@@ -3,10 +3,11 @@
 declare(strict_types=1);
 
 require_once('vendor/autoload.php');
+require_once('db_connect.php');
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-echo $_ENV['NAME'] . "\n";
-echo $_ENV['DB_HOST']. "\n";
-echo $_SERVER['DB_USERNAME'] . "\n";
+$dbConnection = (new DatabaseConnector())->getConnection();
+
+?>
