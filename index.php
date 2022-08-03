@@ -1,60 +1,53 @@
 <?php
-//strings
-$user_name ="warren";
-$phone_number="+254705122230";
-echo($user_name);
-//intagers &floats
-$net_salary = 200000;
-$gross_salary = 270000.00;
-echo($net_salary."</br>");
-//constants
-define("AGE",26);
-echo AGE;
-//arrays
-$friends =["sang","Abdi","Maroa","Sunday"];
-print_r($friends);
-$family =["sister"=>"Joan","brother"=>"Dancun","Father"=>"Josiah","mother"=>"Margaret"];
-echo($family["sister"]."</br>");
-//objects and classes
-class Developer{
-   var $developer_name;
-   var $phone_number; 
-    
-    function writeCode(){
-        print("code review"."</br>");
-    }
-    // getters
-   function getName(){
-        echo $this->developer_name;
-    }
-   // setters
-   function setName($name){
-    $this->developer_name = $name;
-   }
-   // constructors
-   function __construct($name, $phone){
-    $this->developer_name =$name;
-    $this->phone_number=$phone;
-   }
-
-}
-// for loops
-for($i=0;$i<count($friends);$i++){
-    echo("this is the day the lord has made"."</br>");
-}
-// while loop
-$i=0;
-while($i<count($family)){
-    echo("truthy"."</br>");
-    $i++;
-}
-
-// object
-$warren =new Developer("warren ochieng","0705122230");
-$warren->getName();
-
- 
-
-
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <title> E-COMMERCE WEBSITE BY EDYODA | CREATED BY PRIYANKA SHARMA </title>
+    <!-- favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    <!-- header links -->
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/assets/css/header.css">
+    <link rel="stylesheet" href="src/assets/css/content.css">
+    <link rel="stylesheet" href="src/assets/css/footer.css">
+    <!-- slider links -->
+    <!-- <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <script src="src/assets/js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+</head>
+<body>
+ <?php
+ require_once("src/views/header.php");
+ require_once("src/views/hero.php");
+ include("src/views/blogs.php");
+ require_once("src/views/footer.php");
+ ?>  
+ <!-- slider JS START -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script>
+    $(document).ready(function()
+    {
+    $('#containerSlider').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        });
+    });
+</script>
+<!-- slider JS ENDS -->
+
+<!-- content JS -->
+<script src="src/assets/js/content.js"></script>
+</body>
+</html>
