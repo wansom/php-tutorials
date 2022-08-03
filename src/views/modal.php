@@ -9,16 +9,16 @@
                     <img src="src/assets/img/signup-img.jpg" alt="">
                 </div>
                 <div class="signup-form">
-                    <form method="POST" class="register-form" id="register-form">
+                    <form method="POST" class="register-form" action="src/controllers/create.php" id="register-form">
                         <h2>Billing Information</h2>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Name :</label>
-                                <input type="text" name="name" id="name" required/>
+                                <input type="text" name="name" id="name" />
                             </div>
                             <div class="form-group">
                                 <label for="father_name">Father Name :</label>
-                                <input type="text" name="father_name" id="father_name" required/>
+                                <input type="text" name="father_name" id="father_name" />
                             </div>
                         </div>
                         <div class="form-group">
