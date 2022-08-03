@@ -17,9 +17,9 @@
                     <!-- USER SECTION (CART AND USER ICON) -->
                     <div id="user">
                         <a href="cart.html"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 0 </div></i></a>
-                        <a href="#"> <i class="fas fa-user-circle userIcon"></i> </a>
+                        <a  id="myBtn"> <i class="fas fa-user-circle userIcon"></i> </a>
+                        
                     </div>
-            </div>
 
         </section>
     </header>
